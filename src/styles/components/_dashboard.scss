@@ -1,0 +1,106 @@
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f1f5f9;
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__main {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+
+  &__page-header {
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin: 0 0 0.5rem;
+    }
+
+    p {
+      color: #64748b;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+
+    &-header {
+      display: flex;
+      justify-content: between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        
+        &.patients { background: #dbeafe; color: #3b82f6; }
+        &.branches { background: #dcfce7; color: #16a34a; }
+        &.doctors { background: #fef3c7; color: #d97706; }
+        &.referrals { background: #ede9fe; color: #7c3aed; }
+      }
+    }
+
+    &-title {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #64748b;
+      margin: 0;
+    }
+
+    &-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin: 0.5rem 0 0;
+    }
+
+    &-change {
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+      
+      &.positive { color: #16a34a; }
+      &.negative { color: #dc2626; }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    &__main {
+      padding: 1rem;
+    }
+
+    &__stats {
+      grid-template-columns: 1fr;
+    }
+  }
+}
