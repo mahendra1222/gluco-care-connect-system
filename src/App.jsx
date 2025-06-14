@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Header from './components/Layout/Header';
+import Header from './components/Layout/Header.jsx';
 import Sidebar from './components/Layout/Sidebar';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard.jsx';
 import Patients from './pages/Patients';
 import Referrals from './pages/Referrals';
 import './styles/main.scss';

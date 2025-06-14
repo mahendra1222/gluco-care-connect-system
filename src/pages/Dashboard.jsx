@@ -1,10 +1,9 @@
-
 import React from 'react';
-import DashboardStats from '../components/Dashboard/DashboardStats';
-import { usePatients } from '../hooks/usePatients';
-import { useBranches } from '../hooks/useBranches';
-import { useDoctors } from '../hooks/useDoctors';
-import { useReferrals } from '../hooks/useReferrals';
+import DashboardStats from '../components/Dashboard/DashboardStats.jsx';
+import { usePatients } from '../hooks/usePatients.jsx';
+import { useBranches } from '../hooks/useBranches.jsx';
+import { useDoctors } from '../hooks/useDoctors.jsx';
+import { useReferrals } from '../hooks/useReferrals.jsx';
 
 const Dashboard = () => {
   const { patients, loading: patientsLoading } = usePatients();
