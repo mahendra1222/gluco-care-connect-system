@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Layout/Header.jsx';
-import Sidebar from './components/Layout/Sidebar';
+import Sidebar from './components/Layout/Sidebar.jsx';
 import Dashboard from './pages/Dashboard.jsx';
-import Patients from './pages/Patients';
-import Referrals from './pages/Referrals';
+import Patients from './pages/Patients.jsx';
+import Referrals from './pages/Referrals.jsx';
 import './styles/main.scss';
 
 function App() {
